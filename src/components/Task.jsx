@@ -1,25 +1,17 @@
-import { useState } from 'react';
+import React from "react";
 
-function Task({ task }) {
-  const [checked, setChecked] = useState(task.completed);
+export default function Task({ todo, toggleTodo }) {
+  const { id, task, completed } = todo;
 
-  const handleCheckboxChange = () => {
-    setChecked(!checked);
+  const handleTodoClick = () => {
+    toggleTodo(id);
   };
 
   return (
-    <li className={checked ? 'completed-task' : ''}>
-      <article>
-        <h2>{task.name}</h2>
-        <div>
-          <button className='tarea-btn'>Editar</button>
-          <button className='tarea-btn'>Eliminar</button>
-        </div>
-        <input type='checkbox' checked={checked} onChange={handleCheckboxChange} />
-      </article>
+    <li>
+      <input type="checkbox" checked={completed} onChange={handleTodoClick} />
+      {task}
     </li>
   );
 }
-
-export default Task;
 
