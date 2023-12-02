@@ -1,16 +1,26 @@
 import React from "react";
-import Task from "./Task";
-function TaskList({ todos, toggleTodo }) {
+import TodoItem  from "./todoItem";
+
+
+export default function TaskList({
+    todos,
+    handleUpdateTodo,
+    handleDeleteTodo,
+    handleCompleteTodo,
+  }) {
+
     return (
       <ul>
-        {todos.map((todo) => (
-          <Task key={todo.id} todo={todo} toggleTodo={toggleTodo} />
-        ))}
-      </ul>
-    );
+      {todos.map(todo =>(
+        <TodoItem
+        key={todo.id}
+        todo={todo}
+        handleUpdateTodo={handleUpdateTodo}
+        handleDeleteTodo={handleDeleteTodo}
+        handleCompleteTodo={handleCompleteTodo} 
+        />
+      ))}
+    </ul>
+    )
   }
-  
-  export default TaskList;
-  
-  
 
