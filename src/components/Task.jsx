@@ -65,5 +65,3 @@ export default function Task({ todo, handleUpdateTodo }) {
     </form>
     );
    };
-
-   

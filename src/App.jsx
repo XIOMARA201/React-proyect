@@ -1,8 +1,8 @@
 import './App.css';
 import React from 'react';
-import Header from './components/Header';
-import TaskList from './components/TaskList';
-import TodoAdd from './components/TodoAdd';
+import Header from './Components/Header';
+import TaskList from './Components/TaskList';
+import TodoAdd from './Components/TodoAdd';
 import useTodo from './Hooks/useTodo';
 
 export default function App() {
@@ -51,3 +51,5 @@ export default function App() {
     </div>
   )
 }
+
+//modif rama 4
