@@ -1,5 +1,5 @@
 import React from "react";
-import TodoItem  from "./todoItem";
+import TodoItem  from "./TodoItem";
 
 
 export default function TaskList({
@@ -11,6 +11,7 @@ export default function TaskList({
 
     return (
       <ul>
+        {/* Mapeo de la lista de tareas para generar los elementos de TodoItem */}
       {todos.map(todo =>(
         <TodoItem
         key={todo.id}
@@ -23,4 +24,3 @@ export default function TaskList({
     </ul>
     )
   }
-

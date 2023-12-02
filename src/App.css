@@ -26,81 +26,63 @@ h2 {
   text-align: center;
 }
 
-.annotation-tasks {
-  margin: 40px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.counter-todos,
+.add-task {
+  margin: 20px 0;
 }
 
-.task-input {
+.counter-todos,
+.add-task,
+.task-list {
+  padding: 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.counter-todos h3,
+.add-task h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.counter-todos span,
+.add-task span {
+  font-weight: bold;
+}
+
+.add-task h3,
+.add-task button {
+  font-size: 16px;
+}
+
+.add-task input {
   border: none;
   outline: none;
-  padding: 10px 20px;
+  padding: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  flex: 1;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
   font-family: inherit;
-  font-size: 17px;
+  font-size: 16px;
   color: #555;
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.button {
+.boton {
   border: none;
   background: #3498db;
   color: #fff;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   font-family: inherit;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 16px;
 }
 
-.button:hover {
-  background: #207bb5; 
+.boton:hover {
+  background: #207bb5;
 }
 
-.clear-all {
-  border: none;
-  background: #e74c3c;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-family: inherit;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.clear-all:hover {
-  background: #c0392b;
-}
-
-.item-task {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.item-task-completed {
+.text-decoration-dashed {
   text-decoration: line-through;
 }
-
-.edit-button {
-  margin-right: 10px; 
-}
-
-.task-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
