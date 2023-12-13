@@ -29,7 +29,7 @@ export default function useTodo() {
       }, [todos])
       // los datos de la lista nueva son los que tendran el cambio.
 
-      // Funciones para manipular las tareas.
+      // Funcion para agregar tarea
       const handleNewTodo = todo => {
         const action = {
           type: "Add Todo",
@@ -39,6 +39,7 @@ export default function useTodo() {
         dispatch(action);
       };
     
+      // función para eliminar tarea
       const handleDeleteTodo = id => {
         const action = {
           type: "Delete Todo",
@@ -48,6 +49,7 @@ export default function useTodo() {
         dispatch(action);
       };
     
+      // función para especificar tarea como completada
       const handleCompleteTodo = id => {
         const action = {
           type: "Complete Todo",
@@ -57,6 +59,7 @@ export default function useTodo() {
         dispatch(action);
       };
     
+      // función para editar tarea
       const handleUpdateTodo = (id, description) => {
         const action = {
           type: "Update Todo",
@@ -69,6 +72,15 @@ export default function useTodo() {
         dispatch(action);
       };
 
+      // función para borrar todas las tareas
+      const handleDeleteAllTodos = () => {
+      const action = {
+      type: "Delete All",
+      };
+
+    dispatch(action);
+  };
+
       return{
         todos,
         todosCount,
@@ -76,9 +88,9 @@ export default function useTodo() {
         handleNewTodo,
         handleDeleteTodo,
         handleCompleteTodo,
-        handleUpdateTodo
+        handleUpdateTodo,
+        handleDeleteAllTodos
     }
 };
-
 
 

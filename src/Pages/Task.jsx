@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from './../Components/Header';
-import TaskList from './../Components/TaskList';
-import TodoAdd from './../Components/todoAdd';
+import TaskList from './../components/TaskList';
+import TodoAdd from './../Components/TodoAdd';
 import useTodo from './../Hooks/useTodo';
 
-export default function Tasks() {
+export default function Tareas() {
   const {
     todos,
     todosCount,
@@ -13,6 +13,7 @@ export default function Tasks() {
     handleDeleteTodo,
     handleCompleteTodo,
     handleUpdateTodo,
+    handleDeleteAllTodos,
   } = useTodo();
 
   return (
@@ -46,7 +47,9 @@ export default function Tasks() {
        handleUpdateTodo={handleUpdateTodo}
        handleDeleteTodo={handleDeleteTodo}
        handleCompleteTodo={handleCompleteTodo}
+       handleDeleteAllTodos={handleDeleteAllTodos}
        />
     </div>
   )
 }
+
