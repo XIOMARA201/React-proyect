@@ -1,55 +1,32 @@
 import './App.css';
-import React from 'react';
-import Header from './Components/Header';
-import TaskList from './Components/TaskList';
-import TodoAdd from './Components/TodoAdd';
-import useTodo from './Hooks/useTodo';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Menu from './Routes/Menu';
+import { Home } from './Pages/Home';
+import AboutUs from './Pages/AboutUs';
+import Tasks from './Pages/Tasks';
+
 
 export default function App() {
-  const {
-    todos,
-    todosCount,
-    pendingTodosCount,
-    handleNewTodo,
-    handleDeleteTodo,
-    handleCompleteTodo,
-    handleUpdateTodo,
-  } = useTodo();
 
   return (
-    <div className='App'>
-
-      {/* Encabezado */}
-       <Header />
-
-       <div className='counter-todos'>
-
-        {/* Contador de todas las tareas */}
-        <h3>
-          N° Tasks: <span>{todosCount}</span>
-        </h3>
-
-        {/* Contador de tareas pendientes */}
-        <h3>
-          N° Pending: <span>{pendingTodosCount}</span>
-        </h3>
-       </div>
-
-       <div className='add-task'>
-        <h3>Add Task</h3>
-        {/* Componente para agregar una nueva tarea */}
-        <TodoAdd handleNewTodo={handleNewTodo} />
-       </div>
-
-       {/* Lista de tareas */}
-       <TaskList 
-       todos={todos}
-       handleUpdateTodo={handleUpdateTodo}
-       handleDeleteTodo={handleDeleteTodo}
-       handleCompleteTodo={handleCompleteTodo}
-       />
-    </div>
+    <>
+<BrowserRouter>
+<Menu /> 
+<div>
+<Routes>
+<Route
+          path="/"
+          element={<Home />} />
+          <Route
+          path="AboutUs"
+          element={<AboutUs />} />
+<Route
+          path="Tasks"
+          element={<Tasks />} />
+      </Routes>
+  </div>
+  </BrowserRouter>
+  </>
   )
 }
 
-//modif rama 4
