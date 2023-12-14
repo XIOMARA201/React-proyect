@@ -58,7 +58,7 @@ export default function TodoAdd ({ handleNewTodo }) {
           name="description"
           value={description}
           onChange={onInputChange}
-          placeholder="¿Cual es tú siguiente tarea?"
+          placeholder="¿Cual es tú tarea?"
           />
 
           {/* Mensaje de error si la descripción está vacía. */}
@@ -78,7 +78,7 @@ export default function TodoAdd ({ handleNewTodo }) {
           name="descriptionTask"
           value={descriptionTask}
           onChange={onInputChange}
-          placeholder="Indica los detalles de tú tarea"
+          placeholder="Indica una descripciòn"
           />
 
           {/* Botón para agregar la tarea. */}
